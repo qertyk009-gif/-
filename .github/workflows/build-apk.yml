@@ -1,0 +1,60 @@
+name: "Build Android APK"
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch: {}
+
+env:
+  GODOT_VERSION: "4.3"
+  EXPORT_NAME: "barahlo24"
+  PROJECT_PATH: "barahlo24"
+
+permissions:
+  contents: write
+
+jobs:
+  export-android:
+    name: Android Debug APK
+    runs-on: ubuntu-24.04
+    container:
+      image: barichello/godot-ci:4.3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Godot editor settings and export templates
+        run: |
+          mkdir -v -p ~/.local/share/godot/export_templates/
+          mkdir -v -p ~/.config/
+          mv /root/.config/godot ~/.config/godot
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+
+      - name: Prime asset import
+        run: |
+          cd "$PROJECT_PATH"
+          godot --headless --verbose --editor --quit
+
+      - name: Build Android Debug APK
+        run: |
+          mkdir -v -p build/android
+          EXPORT_DIR="$(readlink -f build)"
+          cd "$PROJECT_PATH"
+          godot --headless --verbose --export-debug "Android" "$EXPORT_DIR/android/${EXPORT_NAME}-debug.apk"
+
+      - name: Upload APK as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.EXPORT_NAME }}-debug-apk
+          path: build/android/${{ env.EXPORT_NAME }}-debug.apk
+          if-no-files-found: error
+
+      - name: Publish to GitHub Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: "Барахолка24 — сборка #${{ github.run_number }}"
+          body: "Debug-сборка APK, коммит ${{ github.sha }}"
+          files: build/android/${{ env.EXPORT_NAME }}-debug.apk
+          prerelease: true
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
