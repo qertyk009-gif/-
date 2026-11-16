@@ -1,0 +1,36 @@
+{
+  "categories": [
+    {
+      "id": "smartphones",
+      "name": "Смартфоны",
+      "icon_color_index": 0,
+      "model_family": "slab_phone",
+      "base_repair_skill": "electronics",
+      "description": "Телефоны и планшеты — быстрый оборот, но хрупкие."
+    },
+    {
+      "id": "bicycles",
+      "name": "Велосипеды",
+      "icon_color_index": 1,
+      "model_family": "bike_frame",
+      "base_repair_skill": "mechanics",
+      "description": "Городские и горные велосипеды, требуют места и возни с колёсами."
+    },
+    {
+      "id": "tools",
+      "name": "Инструменты",
+      "icon_color_index": 2,
+      "model_family": "power_tool",
+      "base_repair_skill": "mechanics",
+      "description": "Дрели, шуруповёрты, болгарки — ходовой товар у мастеров."
+    },
+    {
+      "id": "furniture",
+      "name": "Мебель",
+      "icon_color_index": 3,
+      "model_family": "furniture_box",
+      "base_repair_skill": "carpentry",
+      "description": "Столы, стулья, тумбы — долго везти, но хорошая маржа."
+    }
+  ]
+}

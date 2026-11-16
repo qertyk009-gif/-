@@ -1,0 +1,101 @@
+{
+  "_comment": "Шаблоны товаров. price — базовая рыночная цена в чистом/рабочем виде. Реальная цена объявления = price * condition_mult * market_mult ± случайность, считается в коде (MarketSim/BotFactory). model описывает процедурную low-poly геометрию (генерируется в коде из примитивов, см. scripts/models).",
+  "items": [
+    {
+      "id": "phone_budget",
+      "category": "smartphones",
+      "name": "Смартфон Nexora Lite",
+      "price": 4000,
+      "possible_defects": ["screen_crack", "battery_drain", "charging_port"],
+      "model": { "family": "slab_phone", "scale": 1.0, "palette_index": 0 }
+    },
+    {
+      "id": "phone_flagship",
+      "category": "smartphones",
+      "name": "Смартфон Orion X12",
+      "price": 12000,
+      "possible_defects": ["screen_crack", "battery_drain", "charging_port", "water_damage"],
+      "model": { "family": "slab_phone", "scale": 1.05, "palette_index": 1 }
+    },
+    {
+      "id": "tablet_mini",
+      "category": "smartphones",
+      "name": "Планшет TabOne 8\"",
+      "price": 7000,
+      "possible_defects": ["screen_crack", "battery_drain"],
+      "model": { "family": "slab_phone", "scale": 1.4, "palette_index": 2 }
+    },
+    {
+      "id": "bike_city",
+      "category": "bicycles",
+      "name": "Велосипед городской Rolli City",
+      "price": 9000,
+      "possible_defects": ["flat_tire", "chain_rust", "brake_worn"],
+      "model": { "family": "bike_frame", "scale": 1.0, "palette_index": 3 }
+    },
+    {
+      "id": "bike_mountain",
+      "category": "bicycles",
+      "name": "Велосипед горный TrailBeast",
+      "price": 15000,
+      "possible_defects": ["flat_tire", "chain_rust", "brake_worn", "frame_dent"],
+      "model": { "family": "bike_frame", "scale": 1.1, "palette_index": 4 }
+    },
+    {
+      "id": "bike_kids",
+      "category": "bicycles",
+      "name": "Велосипед детский Sparrow",
+      "price": 3500,
+      "possible_defects": ["flat_tire", "chain_rust"],
+      "model": { "family": "bike_frame", "scale": 0.7, "palette_index": 5 }
+    },
+    {
+      "id": "tool_drill",
+      "category": "tools",
+      "name": "Дрель-шуруповёрт PowerDrill 18V",
+      "price": 3200,
+      "possible_defects": ["battery_drain", "motor_noise", "cable_damage"],
+      "model": { "family": "power_tool", "scale": 1.0, "palette_index": 6 }
+    },
+    {
+      "id": "tool_grinder",
+      "category": "tools",
+      "name": "Болгарка AngleMaster 125",
+      "price": 2800,
+      "possible_defects": ["motor_noise", "cable_damage", "missing_guard"],
+      "model": { "family": "power_tool", "scale": 1.0, "palette_index": 7 }
+    },
+    {
+      "id": "tool_jigsaw",
+      "category": "tools",
+      "name": "Лобзик электрический JigPro",
+      "price": 2200,
+      "possible_defects": ["motor_noise", "cable_damage"],
+      "model": { "family": "power_tool", "scale": 0.9, "palette_index": 0 }
+    },
+    {
+      "id": "furniture_chair",
+      "category": "furniture",
+      "name": "Стул офисный ErgoSit",
+      "price": 2500,
+      "possible_defects": ["wobbly_leg", "torn_fabric", "squeaky_joint"],
+      "model": { "family": "furniture_box", "scale": 0.8, "palette_index": 1 }
+    },
+    {
+      "id": "furniture_table",
+      "category": "furniture",
+      "name": "Стол журнальный WoodLine",
+      "price": 4500,
+      "possible_defects": ["wobbly_leg", "scratched_surface"],
+      "model": { "family": "furniture_box", "scale": 1.1, "palette_index": 2 }
+    },
+    {
+      "id": "furniture_cabinet",
+      "category": "furniture",
+      "name": "Тумба прикроватная Nordic",
+      "price": 3800,
+      "possible_defects": ["wobbly_leg", "scratched_surface", "squeaky_joint"],
+      "model": { "family": "furniture_box", "scale": 1.0, "palette_index": 3 }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "_comment": "Рыночные события, периодически случайно активируются MarketSim (раз в N дней). demand_mult/supply_mult модифицируют цены ленты и спрос на продажу по category (или all).",
+  "events": [
+    {
+      "id": "phone_boom",
+      "name": "Бум на смартфоны",
+      "description": "Все хотят новый телефон — спрос и цены на смартфоны выросли.",
+      "category": "smartphones",
+      "demand_mult": 1.25,
+      "supply_mult": 0.9,
+      "duration_days": 2
+    },
+    {
+      "id": "bike_season",
+      "name": "Велосезон открыт",
+      "description": "Весенний спрос на велосипеды резко подскочил.",
+      "category": "bicycles",
+      "demand_mult": 1.3,
+      "supply_mult": 1.0,
+      "duration_days": 3
+    },
+    {
+      "id": "tool_shortage",
+      "name": "Дефицит инструментов",
+      "description": "Стройсезон — инструментов на рынке не хватает.",
+      "category": "tools",
+      "demand_mult": 1.2,
+      "supply_mult": 0.7,
+      "duration_days": 2
+    },
+    {
+      "id": "furniture_selloff",
+      "name": "Распродажа мебели",
+      "description": "Переезды в этом районе — рынок завален мебелью, цены просели.",
+      "category": "furniture",
+      "demand_mult": 0.85,
+      "supply_mult": 1.3,
+      "duration_days": 2
+    },
+    {
+      "id": "general_slowdown",
+      "name": "Затишье на рынке",
+      "description": "Все категории торгуются немного вяло.",
+      "category": "all",
+      "demand_mult": 0.9,
+      "supply_mult": 1.0,
+      "duration_days": 1
+    }
+  ]
+}
