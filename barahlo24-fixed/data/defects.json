@@ -1,0 +1,140 @@
+{
+  "_comment": "Поломки. severity 0..1 влияет на просадку цены и сложность мини-игры. minigame указывает, какая мини-игра чинит дефект. requires_part ссылается на parts.json (null = не нужна запчасть, чинится только мини-игрой/чисткой).",
+  "defects": [
+    {
+      "id": "screen_crack",
+      "name": "Треснут экран",
+      "severity": 0.35,
+      "visible": true,
+      "minigame": "part_swap",
+      "requires_part": "screen",
+      "diagnosis_hint": "Паутина трещин в углу экрана."
+    },
+    {
+      "id": "battery_drain",
+      "name": "Батарея быстро садится",
+      "severity": 0.25,
+      "visible": false,
+      "minigame": "part_swap",
+      "requires_part": "battery",
+      "diagnosis_hint": "При диагностике разряд идёт вдвое быстрее нормы."
+    },
+    {
+      "id": "charging_port",
+      "name": "Разболтан разъём зарядки",
+      "severity": 0.15,
+      "visible": false,
+      "minigame": "soldering",
+      "requires_part": null,
+      "diagnosis_hint": "Контакт пропадает, если пошевелить кабель."
+    },
+    {
+      "id": "water_damage",
+      "name": "Следы влаги под крышкой",
+      "severity": 0.4,
+      "visible": false,
+      "minigame": "cleaning",
+      "requires_part": null,
+      "diagnosis_hint": "Индикатор влаги покраснел."
+    },
+    {
+      "id": "flat_tire",
+      "name": "Спущено колесо",
+      "severity": 0.15,
+      "visible": true,
+      "minigame": "part_swap",
+      "requires_part": "tire",
+      "diagnosis_hint": "Камера не держит воздух."
+    },
+    {
+      "id": "chain_rust",
+      "name": "Ржавая цепь",
+      "severity": 0.2,
+      "visible": true,
+      "minigame": "cleaning",
+      "requires_part": null,
+      "diagnosis_hint": "Цепь скрипит и покрыта ржавчиной."
+    },
+    {
+      "id": "brake_worn",
+      "name": "Стёрты тормозные колодки",
+      "severity": 0.2,
+      "visible": false,
+      "minigame": "part_swap",
+      "requires_part": "brake_pad",
+      "diagnosis_hint": "Тормозит с большим усилием и скрипом."
+    },
+    {
+      "id": "frame_dent",
+      "name": "Вмятина на раме",
+      "severity": 0.3,
+      "visible": true,
+      "minigame": "screwdriver",
+      "requires_part": null,
+      "diagnosis_hint": "Заметная вмятина сбоку рамы."
+    },
+    {
+      "id": "motor_noise",
+      "name": "Мотор гудит и искрит",
+      "severity": 0.3,
+      "visible": false,
+      "minigame": "soldering",
+      "requires_part": null,
+      "diagnosis_hint": "При включении слышен посторонний гул."
+    },
+    {
+      "id": "cable_damage",
+      "name": "Повреждён провод питания",
+      "severity": 0.2,
+      "visible": true,
+      "minigame": "part_swap",
+      "requires_part": "cable",
+      "diagnosis_hint": "Оголённые жилы у вилки."
+    },
+    {
+      "id": "missing_guard",
+      "name": "Нет защитного кожуха",
+      "severity": 0.15,
+      "visible": true,
+      "minigame": "screwdriver",
+      "requires_part": "guard",
+      "diagnosis_hint": "Диск не прикрыт кожухом — опасно."
+    },
+    {
+      "id": "wobbly_leg",
+      "name": "Шатается ножка",
+      "severity": 0.15,
+      "visible": true,
+      "minigame": "screwdriver",
+      "requires_part": null,
+      "diagnosis_hint": "Мебель качается на ровном полу."
+    },
+    {
+      "id": "torn_fabric",
+      "name": "Порвана обивка",
+      "severity": 0.2,
+      "visible": true,
+      "minigame": "cleaning",
+      "requires_part": "fabric",
+      "diagnosis_hint": "Дыра на сиденье."
+    },
+    {
+      "id": "squeaky_joint",
+      "name": "Скрипит соединение",
+      "severity": 0.1,
+      "visible": false,
+      "minigame": "screwdriver",
+      "requires_part": null,
+      "diagnosis_hint": "Скрип при нажатии."
+    },
+    {
+      "id": "scratched_surface",
+      "name": "Поцарапана поверхность",
+      "severity": 0.1,
+      "visible": true,
+      "minigame": "cleaning",
+      "requires_part": null,
+      "diagnosis_hint": "Множество мелких царапин."
+    }
+  ]
+}

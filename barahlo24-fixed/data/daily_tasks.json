@@ -1,0 +1,55 @@
+{
+  "_comment": "Пул ежедневных заданий. type: sell_count / sell_category / profit_target / repair_count / negotiation_discount. Параметры читаются DailyTasks-генератором (в GameState).",
+  "tasks_pool": [
+    {
+      "id": "sell_any_3",
+      "type": "sell_count",
+      "target": 3,
+      "reward_money": 500,
+      "reward_rep": 2,
+      "description": "Продать 3 любых товара."
+    },
+    {
+      "id": "sell_smartphones_1",
+      "type": "sell_category",
+      "category": "smartphones",
+      "target": 1,
+      "reward_money": 400,
+      "reward_rep": 1,
+      "description": "Продать 1 смартфон."
+    },
+    {
+      "id": "sell_bicycles_1",
+      "type": "sell_category",
+      "category": "bicycles",
+      "target": 1,
+      "reward_money": 450,
+      "reward_rep": 1,
+      "description": "Продать 1 велосипед."
+    },
+    {
+      "id": "profit_1000",
+      "type": "profit_target",
+      "target": 1000,
+      "reward_money": 600,
+      "reward_rep": 2,
+      "description": "Заработать чистыми 1000 монет за день."
+    },
+    {
+      "id": "repair_2",
+      "type": "repair_count",
+      "target": 2,
+      "reward_money": 350,
+      "reward_rep": 2,
+      "description": "Отремонтировать 2 товара."
+    },
+    {
+      "id": "negotiate_discount_15",
+      "type": "negotiation_discount",
+      "target": 15,
+      "reward_money": 300,
+      "reward_rep": 1,
+      "description": "Выбить скидку 15% и больше хотя бы один раз при покупке."
+    }
+  ]
+}

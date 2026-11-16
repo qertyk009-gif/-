@@ -1,0 +1,60 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Барахолка24"
+config/description="Симулятор перекупщика: ищи, торгуйся, ремонтируй, продавай."
+run/main_scene="res://scenes/ui/BootSplash.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
+boot_splash/bg_color=Color(0.07, 0.09, 0.12, 1)
+boot_splash/fullsize=true
+boot_splash/use_filter=true
+config/icon="res://assets/icon/icon_512.png"
+
+[autoload]
+
+GameData="*res://scripts/autoload/GameData.gd"
+GameState="*res://scripts/autoload/GameState.gd"
+SaveSystem="*res://scripts/autoload/SaveSystem.gd"
+NegotiationEngine="*res://scripts/autoload/NegotiationEngine.gd"
+BotFactory="*res://scripts/autoload/BotFactory.gd"
+MarketSim="*res://scripts/autoload/MarketSim.gd"
+ThemeManager="*res://scripts/autoload/ThemeManager.gd"
+LLMBridge="*res://scripts/autoload/LLMBridge.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/size/mode=0
+window/handheld/orientation=1
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+occlusion_culling/use_occlusion_culling=false
+environment/defaults/default_clear_color=Color(0.07, 0.09, 0.12, 1)
+
+[physics]
+
+common/physics_ticks_per_second=30
+2d/run_on_separate_thread=false
+3d/run_on_separate_thread=false

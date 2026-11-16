@@ -1,0 +1,82 @@
+{
+  "_comment": "Запчасти, покупаемые у ботов-продавцов запчастей. quality_tiers описывают варианты одной и той же запчасти: original/used/copy/incompatible. quality_mult влияет на итоговое качество ремонта (0..1), incompatible может провалить ремонт (quality_mult отрицательный эффект обрабатывается в коде).",
+  "parts": [
+    {
+      "id": "screen",
+      "name": "Экран",
+      "base_price": 1200,
+      "quality_tiers": [
+        { "tier": "original", "price_mult": 1.0, "quality_mult": 1.0 },
+        { "tier": "used", "price_mult": 0.6, "quality_mult": 0.75 },
+        { "tier": "copy", "price_mult": 0.4, "quality_mult": 0.5 },
+        { "tier": "incompatible", "price_mult": 0.3, "quality_mult": 0.0 }
+      ]
+    },
+    {
+      "id": "battery",
+      "name": "Батарея",
+      "base_price": 600,
+      "quality_tiers": [
+        { "tier": "original", "price_mult": 1.0, "quality_mult": 1.0 },
+        { "tier": "used", "price_mult": 0.55, "quality_mult": 0.7 },
+        { "tier": "copy", "price_mult": 0.35, "quality_mult": 0.45 },
+        { "tier": "incompatible", "price_mult": 0.25, "quality_mult": 0.0 }
+      ]
+    },
+    {
+      "id": "tire",
+      "name": "Покрышка",
+      "base_price": 350,
+      "quality_tiers": [
+        { "tier": "original", "price_mult": 1.0, "quality_mult": 1.0 },
+        { "tier": "used", "price_mult": 0.5, "quality_mult": 0.7 },
+        { "tier": "copy", "price_mult": 0.35, "quality_mult": 0.5 },
+        { "tier": "incompatible", "price_mult": 0.2, "quality_mult": 0.0 }
+      ]
+    },
+    {
+      "id": "brake_pad",
+      "name": "Тормозные колодки",
+      "base_price": 250,
+      "quality_tiers": [
+        { "tier": "original", "price_mult": 1.0, "quality_mult": 1.0 },
+        { "tier": "used", "price_mult": 0.5, "quality_mult": 0.65 },
+        { "tier": "copy", "price_mult": 0.3, "quality_mult": 0.45 },
+        { "tier": "incompatible", "price_mult": 0.2, "quality_mult": 0.0 }
+      ]
+    },
+    {
+      "id": "cable",
+      "name": "Силовой кабель",
+      "base_price": 180,
+      "quality_tiers": [
+        { "tier": "original", "price_mult": 1.0, "quality_mult": 1.0 },
+        { "tier": "used", "price_mult": 0.5, "quality_mult": 0.7 },
+        { "tier": "copy", "price_mult": 0.3, "quality_mult": 0.5 },
+        { "tier": "incompatible", "price_mult": 0.2, "quality_mult": 0.0 }
+      ]
+    },
+    {
+      "id": "guard",
+      "name": "Защитный кожух",
+      "base_price": 150,
+      "quality_tiers": [
+        { "tier": "original", "price_mult": 1.0, "quality_mult": 1.0 },
+        { "tier": "used", "price_mult": 0.55, "quality_mult": 0.75 },
+        { "tier": "copy", "price_mult": 0.35, "quality_mult": 0.55 },
+        { "tier": "incompatible", "price_mult": 0.2, "quality_mult": 0.0 }
+      ]
+    },
+    {
+      "id": "fabric",
+      "name": "Обивочная ткань",
+      "base_price": 300,
+      "quality_tiers": [
+        { "tier": "original", "price_mult": 1.0, "quality_mult": 1.0 },
+        { "tier": "used", "price_mult": 0.5, "quality_mult": 0.65 },
+        { "tier": "copy", "price_mult": 0.3, "quality_mult": 0.45 },
+        { "tier": "incompatible", "price_mult": 0.2, "quality_mult": 0.0 }
+      ]
+    }
+  ]
+}

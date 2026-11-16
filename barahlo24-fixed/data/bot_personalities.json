@@ -1,0 +1,90 @@
+{
+  "_comment": "Характеры ботов. Параметры 0..1 используются NegotiationEngine для расчёта согласия/обиды/ухода. greed - насколько держится за минимальную цену. kindness - готовность уступить/простить резкость. patience_base - запас терпения (ходов торга). mood_volatility - как сильно меняется настроение от реплик игрока. honesty - вероятность правды про дефекты/оригинальность; мошенники (scammer) имеют низкую честность и доп. логику обмана в NegotiationEngine/BotFactory. haste - торопыги быстрее соглашаются, но и быстрее уходят от долгого торга.",
+  "personalities": [
+    {
+      "id": "greedy",
+      "name": "Жадина",
+      "greed": 0.85,
+      "kindness": 0.25,
+      "patience_base": 6,
+      "mood_volatility": 0.4,
+      "honesty": 0.6,
+      "haste": 0.2,
+      "min_price_mult_range": [1.05, 1.25],
+      "flavor_phrases": ["Это меньше, чем товар реально стоит.", "Дешевле только даром отдавать."]
+    },
+    {
+      "id": "kind",
+      "name": "Добряк",
+      "greed": 0.3,
+      "kindness": 0.85,
+      "patience_base": 9,
+      "mood_volatility": 0.2,
+      "honesty": 0.85,
+      "haste": 0.3,
+      "min_price_mult_range": [0.85, 1.0],
+      "flavor_phrases": ["Ладно, по рукам, лишь бы вещь послужила.", "Не хочу долго торговаться, сойдёмся по-людски."]
+    },
+    {
+      "id": "haste",
+      "name": "Торопыга",
+      "greed": 0.5,
+      "kindness": 0.5,
+      "patience_base": 3,
+      "mood_volatility": 0.6,
+      "honesty": 0.7,
+      "haste": 0.9,
+      "min_price_mult_range": [0.9, 1.1],
+      "flavor_phrases": ["Давай быстрее, у меня времени нет.", "Берёшь — бери, нет — я побежал дальше."]
+    },
+    {
+      "id": "whiner",
+      "name": "Нытик",
+      "greed": 0.55,
+      "kindness": 0.5,
+      "patience_base": 7,
+      "mood_volatility": 0.5,
+      "honesty": 0.75,
+      "haste": 0.25,
+      "min_price_mult_range": [0.95, 1.1],
+      "flavor_phrases": ["Эх, жизнь тяжёлая, вот и продаю...", "Ну зачем вы так давите на цену, обидно же."]
+    },
+    {
+      "id": "scammer",
+      "name": "Мошенник",
+      "greed": 0.7,
+      "kindness": 0.35,
+      "patience_base": 5,
+      "mood_volatility": 0.3,
+      "honesty": 0.15,
+      "haste": 0.5,
+      "min_price_mult_range": [0.8, 1.2],
+      "flavor_phrases": ["Вещь идеальная, без единого дефекта, гарантирую!", "Переведите предоплату — сразу вышлю."],
+      "scam_type_pool": ["fake_prepay", "item_swap"]
+    },
+    {
+      "id": "expert",
+      "name": "Знаток",
+      "greed": 0.6,
+      "kindness": 0.55,
+      "patience_base": 8,
+      "mood_volatility": 0.25,
+      "honesty": 0.9,
+      "haste": 0.3,
+      "min_price_mult_range": [1.0, 1.15],
+      "flavor_phrases": ["Я разбираюсь в этом товаре, цену знаю точно.", "По рынку ваша цена ниже справедливой."]
+    },
+    {
+      "id": "novice",
+      "name": "Новичок",
+      "greed": 0.35,
+      "kindness": 0.6,
+      "patience_base": 5,
+      "mood_volatility": 0.7,
+      "honesty": 0.55,
+      "haste": 0.45,
+      "min_price_mult_range": [0.75, 1.05],
+      "flavor_phrases": ["Я тут впервые продаю, не знаю точно сколько просить.", "А это нормальная цена? Я не уверен."]
+    }
+  ]
+}
